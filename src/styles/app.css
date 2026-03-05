@@ -1,0 +1,51 @@
+[v-cloak] {
+    display: none;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+    background: linear-gradient(140deg, #eef2ff 0%, #f8fafc 40%, #ecfeff 100%);
+}
+
+.page {
+    min-height: 100vh;
+    padding: 48px 16px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.card {
+    width: 100%;
+    max-width: 720px;
+    padding: 20px 24px 28px;
+    border-radius: 16px;
+    background: #fff;
+    box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+}
+
+.header h2 {
+    margin: 0;
+    color: #1f2937;
+}
+
+.sub-title {
+    margin-top: 8px;
+    color: #6b7280;
+    font-size: 14px;
+}
+
+.inline-row {
+    display: flex;
+    gap: 12px;
+}
+
+.inline-row .el-input {
+    flex: 1;
+}
