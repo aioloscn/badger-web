@@ -10,35 +10,50 @@ body {
     margin: 0;
     min-height: 100vh;
     font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
-    background: linear-gradient(140deg, #eef2ff 0%, #f8fafc 40%, #ecfeff 100%);
+    background: linear-gradient(135deg, #dff3ff 0%, #edf8ff 45%, #f5fbff 100%);
 }
 
 .page {
     min-height: 100vh;
-    padding: 48px 16px;
+    padding: 36px 16px;
     display: flex;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
 }
 
 .card {
     width: 100%;
-    max-width: 720px;
-    padding: 20px 24px 28px;
-    border-radius: 16px;
+    max-width: 1080px;
+    min-height: 620px;
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    border-radius: 24px;
     background: #fff;
-    box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+    box-shadow: 0 24px 60px rgba(8, 56, 92, 0.12);
+    overflow: hidden;
+}
+
+.visual-panel {
+    position: relative;
+    background-image: linear-gradient(140deg, rgba(17, 102, 180, 0.34), rgba(38, 165, 255, 0.2)), url("https://images.unsplash.com/photo-1542273917363-3b1817f69a2d?auto=format&fit=crop&w=1400&q=80");
+    background-size: cover;
+    background-position: center;
+}
+
+.visual-overlay {
+    height: 100%;
+    background: linear-gradient(180deg, rgba(4, 34, 60, 0.08), rgba(4, 34, 60, 0.56));
+}
+
+.form-panel {
+    padding: 36px 34px;
+    background: linear-gradient(180deg, #ffffff 0%, #f5fbff 100%);
 }
 
 .header h2 {
     margin: 0;
-    color: #1f2937;
-}
-
-.sub-title {
-    margin-top: 8px;
-    color: #6b7280;
-    font-size: 14px;
+    color: #0f3550;
+    font-size: 30px;
 }
 
 .inline-row {
@@ -48,4 +63,37 @@ body {
 
 .inline-row .el-input {
     flex: 1;
+}
+
+.form-panel .el-tabs__item.is-active {
+    color: #1f9bff;
+}
+
+.form-panel .el-tabs__active-bar {
+    background-color: #1f9bff;
+}
+
+.form-panel .el-button--primary {
+    border: none;
+    background: linear-gradient(135deg, #15a5ff, #5bc6ff);
+}
+
+.form-panel .el-button--primary:hover {
+    background: linear-gradient(135deg, #0f97ee, #4ab8f8);
+}
+
+@media (max-width: 960px) {
+    .card {
+        grid-template-columns: 1fr;
+        max-width: 560px;
+        min-height: auto;
+    }
+
+    .visual-panel {
+        min-height: 220px;
+    }
+
+    .form-panel {
+        padding: 26px 22px 28px;
+    }
 }
